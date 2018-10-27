@@ -1,0 +1,18 @@
+#!/bin/sh
+if [!/etc/crontab_checkfile]
+then
+	md5sum /etc/crontab > /etc/crontab_checkfile
+fi [ /etc/crontab_checkfile != md5sum /etc/crontab ]
+md5sum /etc/crontab > /etc/check
+if [diff /etc/crontab_checkfile /etc/check]
+then
+	mail "Crontab a changé" root
+	md5sum /etc/crontab > /etc/crontab_checkfile
+	rm /etc/check
+else
+	rm /etc/check
+fi
+
+# creation de cron
+#echo "0 0 * * * root sudo sh `pwd`/04" >> /etc/crontab
+#/etc/init.d/cron restart

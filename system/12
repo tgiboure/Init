@@ -1,0 +1,3 @@
+#!/bin/sh
+#du -sh permet de liste l espace en MB, KB, etc
+du -s /var/*

@@ -1,0 +1,8 @@
+#03.sh dans ma vm
+#!/bin/sh
+if test -d $1
+then
+		ls -lS $1 | grep -v "dr"
+else
+		echo "usage: ./03.sh VALID_PATH"
+fi

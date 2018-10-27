@@ -1,0 +1,3 @@
+#!/bin/sh
+#le & a la fin de la commande le lance en background, faire jobs pour voir si la commande tourne toujours
+tail -f /var/log/syslog &

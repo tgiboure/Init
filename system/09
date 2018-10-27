@@ -1,0 +1,3 @@
+#!/bin/sh
+# les commandes who et w donnent plus d infos ce qui n est pas forcement ce qui est demandé
+users

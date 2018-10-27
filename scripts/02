@@ -1,0 +1,7 @@
+#!/bin/sh
+apt-get update -y > /var/log/update_script.log
+apt-get upgrade -y >> /var/log/update_script.log
+
+#creation de la tache dans cron
+#echo "0 4 * * 1 root sudo sh `pwd`/02" >> /etc/crontab
+#/etc/init.d/cron restart
